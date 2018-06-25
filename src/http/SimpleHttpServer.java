@@ -28,7 +28,7 @@ public class SimpleHttpServer {
 				Socket socket = serverSocket.accept(); // accept를 하게되면 Blocking이 되면서 잠시 정지하기 때문에 무한루프도 문제없음
 
 				// 4. Delegate Processing Request
-				new RequestHandler(socket).start(); //소켓을 던져줌 그리고 start를 하면 RequestHandler에서 run이 실행됨
+				new RequestHandler2(socket).start(); //소켓을 던져줌 그리고 start를 하면 RequestHandler에서 run이 실행됨
 			}
 
 		} catch (IOException ex) {

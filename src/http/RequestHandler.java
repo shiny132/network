@@ -86,7 +86,6 @@ public class RequestHandler extends Thread { // 쓰레드가 하나 만들어짐
 		outputStream.write(("Content-Type:" + mimeType + "; charset=utf-8\r\n").getBytes("UTF-8"));
 		outputStream.write("\r\n".getBytes());
 		outputStream.write(body);
-
 	}
 
 	private void response404Error(OutputStream outputStream, String protocol) throws IOException {
